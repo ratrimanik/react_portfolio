@@ -70,7 +70,7 @@ const Experience = () => {
                   <SwiperSlide key={i}>
                     <div className="flex justify-center items-center text-center w-full">
                       
-                    <div className="flex justify-center items-center text-center w-2/3 md:w-full">
+                    <div className="flex justify-center items-center text-center w-full">
                       <div>
                         <div className="h-fit w-full rounded-xl text-center">
                           <h3 className="font-semibold mb-2">
