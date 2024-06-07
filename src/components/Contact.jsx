@@ -33,7 +33,7 @@ const Contact = () => {
 
   // Komponen untuk menampilkan info kontak
   const ContactItem = ({ contact }) => (
-    <div className="rounded-xl bg-cyan-600 flex justify-center items-center md:w-80 w-4/5 py-2 my-4 h-40">
+    <div className="rounded-xl bg-cyan-600 flex justify-center items-center md:w-80 w-full py-2 my-4 h-40">
       <div className="flex flex-col items-center mb-4">
         <div className="min-w-[3.5rem] text-3xl h-12 flex items-center justify-center text-white bg-cyan-600 rounded-full mr-2">
           <ion-icon name={contact.logo}></ion-icon>

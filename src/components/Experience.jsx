@@ -42,7 +42,7 @@ const Experience = () => {
           Other <span className="text-cyan-600">Experiences</span>
         </h3>
       </div>
-      <div className="bg-gray-700 relative px-8 rounded-2xl py-5 lg:max-w-4xl md:mx-auto mx-16 min-h-[24rem] mt-6 flex gap-6 lg:flex-row flex-col-reverse items-center">
+      <div className="bg-gray-700 relative px-8 rounded-2xl py-5 lg:max-w-4xl w-5/6 md:mx-auto mx-7 min-h-[24rem] mt-6 flex gap-6 lg:flex-row flex-col-reverse items-center">
         <div className="md:w-2/3 w-full text-center">
           <h2 className="text-2xl font-semibold my-4">
             Committee Experiences, Awards, Soft Skills
