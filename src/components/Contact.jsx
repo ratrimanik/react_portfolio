@@ -2,13 +2,60 @@ import React from "react";
 
 const Contact = () => {
   const contact_info = [
-    { logo: "mail", text: "codeaprogram@gmail.com" },
-    { logo: "logo-whatsapp", text: "123 456 780" },
+    {
+      logo: "mail",
+      title: "Email",
+      text: "ratrimanik2404@gmail.com",
+      href: "mailto:ratrimanik2404@gmail.com",
+    },
+    {
+      logo: "logo-instagram",
+      title: "Instagram",
+      text: "ratriimanik",
+      href: "https://www.instagram.com/ratriimanik",
+    },
+    {
+      logo: "logo-whatsapp",
+      title: "Whatsapp",
+      text: "+6282172658414",
+      href: "https://wa.me/6282172658414",
+    },
     {
       logo: "location",
-      text: "demo location",
+      title: "Location",
+      text: "Surabaya, Indonesia",
     },
   ];
+
+  // Memisahkan contact_info menjadi dua baris
+  const firstRow = contact_info.slice(0, 2);
+  const secondRow = contact_info.slice(2);
+
+  // Komponen untuk menampilkan info kontak
+  const ContactItem = ({ contact }) => (
+    <div className="rounded-xl bg-cyan-600 flex justify-center items-center md:w-80 w-4/5 py-2 my-4 h-40">
+      <div className="flex flex-col items-center mb-4">
+        <div className="min-w-[3.5rem] text-3xl h-12 flex items-center justify-center text-white bg-cyan-600 rounded-full mr-2">
+          <ion-icon name={contact.logo}></ion-icon>
+        </div>
+        <p className="md:text-base text-sm font-bold break-words">
+          {contact.title}
+        </p>
+        <p className="text-[12px] break-words">{contact.text}</p>
+        {contact.href && (
+          <a
+            href={contact.href}
+            className="text-xs font-bold break-words mt-4 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Send a message
+          </a>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <section id="contact" className="py-10 px-3 text-white">
       <div className="text-center mt-8">
@@ -17,31 +64,20 @@ const Contact = () => {
         </h3>
         <p className="text-gray-400 mt-3 text-lg">Get in touch</p>
 
-        <div
-          className="mt-16 flex md:flex-row flex-col
-         gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
-        >
-          <form className="flex flex-col flex-1 gap-5">
-            <input type="text" placeholder="Your Name" />
-            <input type="Email" placeholder="Your Email Address" />
-            <textarea placeholder="Your Message" rows={10}></textarea>
-            <button className="btn-primary w-fit">Send Message</button>
-          </form>
-          <div className="flex flex-col  gap-7 ">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex flex-row  
-                  text-left gap-4 flex-wrap items-center"
-              >
-                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
-                <p className="md:text-base text-sm  break-words">
-                  {contact.text}
-                </p>
+        <div className=" gap-6 p-2 mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center ">
+            <div className="flex md:flex-row flex-col w-3/5 ">
+              <div className="flex flex-col md:w-1/2  items-center">
+                {firstRow.map((contact, i) => (
+                  <ContactItem key={i} contact={contact} />
+                ))}
               </div>
-            ))}
+              <div className="flex flex-col md:w-1/2  items-center">
+                {secondRow.map((contact, i) => (
+                  <ContactItem key={i} contact={contact} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
