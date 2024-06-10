@@ -9,11 +9,12 @@ const Project = () => {
     {
       img: project1,
       name: "Note Website App",
+      subname: "As a Front-End Developer",
       description: [
-        "Bertanggung jawab mengimplementasikan desain UI secara efisien dalam pengembangan aplikasi website.",
-        "Melakukan pembersihan kode program untuk menghilangkan code smells dan meningkatkan kualitas kode.",
-        "Memastikan tampilan website konsisten dan responsif di berbagai perangkat.",
-        "Melakukan pengujian aplikasi melalui manual testing untuk memastikan semua fitur berfungsi dengan baik, pada aplikasi berbasis mobile maupun website.",
+        "Responsible for implementing UI design efficiently in website application development.",
+        "Cleaning program code to eliminate code smells and improve code quality.",
+        "Ensure the appearance of the website is consistent and responsive across various devices.",
+        "Carry out application testing through manual testing to ensure all features function properly, on mobile and website based applications.",
       ],
       github_link: "https://github.com/agilepdbl/2023website-note-taker",
       live_link: "https://notetaker.agileteknik.com/note",
@@ -21,11 +22,12 @@ const Project = () => {
     {
       img: project2,
       name: "Forum Website App",
+      subname: "As a Front-End Developer",
       description: [
-        "Bertanggung jawab mengimplementasikan desain UI secara efisien dalam pengembangan aplikasi website.",
-        "Melakukan pembersihan kode program untuk menghilangkan code smells dan meningkatkan kualitas kode.",
-        "Memastikan tampilan website konsisten dan responsif di berbagai perangkat.",
-        "Mendukung tim backend dalam pengujian API dengan menggunakan postman untuk memastikan integritas dan fungsionalitas sistem.",
+        "Responsible for implementing UI design efficiently in website application development.",
+        "Cleaning program code to eliminate code smells and improve code quality.",
+        "Ensure the appearance of the website is consistent and responsive across various devices.",
+        "Supported the backend team in API testing using postman to ensure system integrity and functionality.",
       ],
       github_link: "https://github.com/ratrimanik/sigarda-app",
       live_link: "https://example.com/404",
@@ -33,10 +35,11 @@ const Project = () => {
     {
       img: project3,
       name: "Productivity Mobile App",
+      subname: "As a Mobile Front-End Developer",
       description: [
-        "Bertanggung jawab mengimplementasikan desain UI secara efisien dalam pengembangan aplikasi mobile.",
-        "Melakukan pembersihan kode program untuk menghilangkan code smells dan meningkatkan kualitas kode.",
-        "Melakukan pengujian aplikasi melalui manual testing untuk memastikan semua fitur berfungsi dengan baik.",
+        "Responsible for implementing UI design efficiently in mobile application development.",
+        "Cleaning program code to eliminate code smells and improve code quality.",
+        "Carry out application testing through manual testing to ensure all features function properly.",
       ],
       github_link: "https://github.com/ratrimanik/notification_mobile_app",
       live_link: "https://example.com/404",
@@ -55,7 +58,8 @@ const Project = () => {
         {projects.map((project_info, i) => (
           <div key={i} className="h-full flex flex-col bg-slate-700 rounded-xl p-4">
             <img src={project_info.img} alt="" className="rounded-lg mb-4" />
-            <h3 className="mb-2">{project_info.name}</h3>
+            <h3>{project_info.name}</h3>
+            <p className="text-gray-400 text-xs -mt-1 mb-2">{project_info.subname}</p>
             <ul className="list-disc pl-5 text-xs flex-grow">
               {project_info.description.map((desc, j) => (
                 <li key={j}>{desc}</li>
