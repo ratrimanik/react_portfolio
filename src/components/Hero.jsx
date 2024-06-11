@@ -23,7 +23,7 @@ const Hero = () => {
             Front-End Developer Enthusiasm
           </h4>
           <div className="flex flex-row mt-8 gap-4">
-          <a href="./public/Ratri Maria Manik - CV.pdf" download>
+          <a href="https://drive.google.com/file/d/1og5eLtdRg3wwU0GPhaBOeEpZgz8mojQX/view?usp=sharing" download>
             <button className="btn-primary">Download CV</button>
           </a>
           <a href="#contact" className="btn-primary">Lets Talk With Me</a>
